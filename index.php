@@ -17,6 +17,7 @@ $controller = 'master';
 $methods = 'index';
 $param = array();
 
+include_once 'controllers\master.php';
 
 if (!empty($request)){
     if( 0 === strpos($request, $request_home )) {
@@ -30,9 +31,17 @@ if (!empty($request)){
             if (isset($components[2])){
                 $param = $components[2];
             }
+            include_once 'controllers/'. $controller . '.php';
         }
     }
 }
-var_dump($controller);
-var_dump($methods);
-var_dump($param);
+$controller_class = '\Controllers\\' . ucfirst($controller) . '_Controller';
+
+$instance = new $controller_class();
+
+if (method_exists($instance, $methods)){
+    
+    call_user_func_array(array( $instance, $methods), array ($param)) ;
+    
+    
+}
