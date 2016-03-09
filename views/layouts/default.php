@@ -1,8 +1,6 @@
-<?php
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+<?php include_once DX_ROOT_DIR . '/views/elements/header.php'; ?>
+<?php include_once $template_name;  ?>
+<?php include_once DX_ROOT_DIR . '/views/elements/footer.php'; ?>
+
 

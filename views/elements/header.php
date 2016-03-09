@@ -1,8 +1,21 @@
-<?php
-
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+<!DOCTYPE html >
+<html>
+    <head>
+        
+         
+    </head>
+    
+    <body>
+        <style type="text/css">
+            body {
+                background-color: aqua;
+            }
+        </style>
+       
+        <div id="contain">
+            <div id="top-menu">
+               Top menu
+            </div>
+            <div id="main">
+      
 

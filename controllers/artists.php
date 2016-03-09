@@ -18,16 +18,19 @@ class Artists_Controller {
     }
     
     public function index () {
-        echo "I am Artist index ()";
-        include_once DX_ROOT_DIR . '/views/artists/index.php' ;
+        
+        $template_name = DX_ROOT_DIR . '/views/artists/index.php' ;
+        include_once DX_ROOT_DIR . '/views/layouts/default.php' ;
     }
     public function dva() {
-        echo "I am Artist index ()";
-        include_once DX_ROOT_DIR . '/views/artists/dva.php' ;
+       
+        $template_name = DX_ROOT_DIR . '/views/artists/dva.php' ;
+        
+       include_once DX_ROOT_DIR . '/views/layouts/default.php' ;
     }
     public function tri() {
-        echo "I am Artist index ()";
-        include_once DX_ROOT_DIR . '/views/artists/tri.php' ;
+       $template_name = DX_ROOT_DIR . '/views/artists/tri.php' ;
+       include_once DX_ROOT_DIR . '/views/layouts/default.php' ;
     }
 }
 
