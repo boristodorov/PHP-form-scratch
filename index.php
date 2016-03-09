@@ -1,9 +1,15 @@
 <?php
 
-/* 
+/*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
+ */
+
+/**
+ * Description of Artist
+ *
+ * @author Boris
  */
 define('DX_ROOT_DIR', dirname( __FILE__ ) . '/');
 define('DX_ROOT_PATH', basename(dirname( __FILE__ )) . '/');
@@ -35,6 +41,8 @@ if (!empty($request)){
         }
     }
 }
+
+
 $controller_class = '\Controllers\\' . ucfirst($controller) . '_Controller';
 
 $instance = new $controller_class();
