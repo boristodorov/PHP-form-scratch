@@ -16,6 +16,7 @@ namespace Models;
 class Master_Model {
     protected $table;
     protected $limit;
+    protected $db;
     
 
 
@@ -27,5 +28,15 @@ class Master_Model {
         if (!isset( $arg['table'] ) ) {
             die ('Table not defined');
         }
+        
+        extract($arg);
+        
+        $this->table = $table;
+        $this->limit = $limit;
+        
+        $db_object = \Lib\Database::get_instance();
+        
+        $this->db = $db_object::get_db();
+        
     }
 }
