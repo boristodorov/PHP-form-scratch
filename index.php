@@ -7,7 +7,7 @@
  */
 
 /**
- * Description of Artist
+ * Description of index
  *
  * @author Boris
  */

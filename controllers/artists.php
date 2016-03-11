@@ -12,25 +12,26 @@
  * @author Boris
  */
 namespace Controllers;
-class Artists_Controller {
+class Artists_Controller extends Master_Controller {
     public function __construct() {
-        echo "I am an artist ";
+        
+        parent::__construct('/views/artists/');
     }
     
     public function index () {
         
-        $template_name = DX_ROOT_DIR . '/views/artists/index.php' ;
-        include_once DX_ROOT_DIR . '/views/layouts/default.php' ;
+        $template_name = DX_ROOT_DIR . $this->views_dir . 'index.php' ;
+        include_once $this->layout;
     }
     public function dva() {
        
-        $template_name = DX_ROOT_DIR . '/views/artists/dva.php' ;
+        $template_name = DX_ROOT_DIR . $this->views_dir .'dva.php' ;
         
-       include_once DX_ROOT_DIR . '/views/layouts/default.php' ;
+       include_once $this->layout;
     }
     public function tri() {
-       $template_name = DX_ROOT_DIR . '/views/artists/tri.php' ;
-       include_once DX_ROOT_DIR . '/views/layouts/default.php' ;
+       $template_name = DX_ROOT_DIR . $this->views_dir .'tri.php' ;
+       include_once $this->layout ;
     }
 }
 
